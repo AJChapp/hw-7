@@ -1,0 +1,11 @@
+#lastTrain{
+    float: right;
+    
+}
+#staticContainer{
+    margin-top: 50px;
+}
+#target{
+    border: solid 2px black;
+    border-top: 0px;
+}

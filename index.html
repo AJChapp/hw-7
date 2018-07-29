@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trains</title>
+    <!-- css reset ↓ -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/Normalize.css">
+
+    <!-- bootstrap↓ -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+    <!-- my css ↓ -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+
+    <!-- jquery↓ -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous" defer></script>
+
+    <!-- popper+bootstrap↓ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous" defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous" defer></script>
+
+    <!-- momentjs↓ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
+    <!-- firebase↓ -->
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+
+    <!-- my js ↓ -->
+    <script src="./assets/js/app.js" defer></script>
+</head>
+
+<body>
+
+    <table class="table" id="target">
+        <tr class="thead-dark">
+            <!-- <th>#</th> -->
+            <th>Train Name</th>
+            <th>Destination</th>
+            <th>Frequency(min)</th>
+            <th>Arrival Time(Military)</th>
+            <th>ETA(min)</th>
+        </tr>
+
+        <tr>
+            <!-- <td>1</td> -->
+            <td>Static Train</td>
+            <td>HTML</td>
+            <td>ALL THE TIME!!!</td>
+            <td>Now</td>
+            <td>0</td>
+        </tr>
+
+
+    </table>
+
+
+
+
+    <div id="staticContainer">
+
+        <div class="col-lg-6 card" id="lastTrain">
+            <div id="lastTrainHeader">
+                <h2>Last Train Added:</h2>
+            </div>
+            <div id="lastTrainName">
+                <p>
+                    <span class="lastTrainLabels">Name:</span>
+                    <span id="lastTrainNameText"></span>
+                </p>
+            </div>
+            <div id="lastTrainDestination">
+                <p>
+                    <span class="lastTrainLabels">Destination:</span>
+                    <span id="lastTrainDestinationText"></span>
+                </p>
+            </div>
+            <div id="lastTrainFrequency">
+                <p>
+                    <span class="lastTrainLabels">Frequency:</span>
+                    <span id="lastTrainFrequencyText"></span>
+                </p>
+            </div>
+            <div id="lastTrainArrival">
+                <p>
+                    <span class="lastTrainLabels">Arrival Time:</span>
+                    <span id="lastTrainArrivalText"></span>
+                </p>
+            </div>
+
+        </div>
+
+
+
+        <div class="col-lg-6">
+            <div class="card card-default">
+                <div class="card-heading">
+                    <h3 class="card-title">Add Train</h3>
+                </div>
+                <div class="card-body">
+
+                    <form role="form">
+                        <div class="form-group row">
+                            <label for="trainInput">Train Name:</label>
+                            <input class="form-control" id="trainInput" type="text">
+                        </div>
+                        <div class="form-group row">
+                            <label for="destinationInput">Destination:</label>
+                            <input class="form-control" id="destinationInput" type="text">
+                        </div>
+                        <div class="form-group row">
+                            <label for="frequencyInput">Frequency(min):</label>
+                            <input class="form-control" id="frequencyInput" type="number">
+                        </div>
+                        <div class="form-group row">
+                            <label for="arrivalInput">Arrival Time:</label>
+                            <input class="form-control" id="arrivalInput" type="time">
+                        </div>
+
+                        <button class="btn btn-default" id="addTrain" type="submit">Add Train</button>
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
